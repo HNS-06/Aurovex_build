@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurovex — Build Your Software Prototype</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        }
+        
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #3b82f6, #22c55e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-blur {
+            backdrop-filter: blur(10px);
+            background: rgba(15, 23, 42, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-blur border-b border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-2xl font-bold text-gradient">Aurovex</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-green-400 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-green-400 transition-colors">About</a>
+                    <a href="#services" class="hover:text-green-400 transition-colors">Services</a>
+                    <a href="#portfolio" class="hover:text-green-400 transition-colors">Portfolio</a>
+                    <a href="#contact" class="hover:text-green-400 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-full gradient-bg flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full blur-3xl animate-pulse-slow"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-green-500 rounded-full blur-3xl animate-pulse-slow"></div>
+        </div>
+        
+        <div class="text-center z-10 px-4 max-w-4xl mx-auto">
+            <div class="animate-float mb-8">
+                <svg class="w-24 h-24 mx-auto mb-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                <span class="text-gradient">Aurovex</span><br>
+                <span class="text-white">Build Your Software</span><br>
+                <span class="text-blue-400">Prototype</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-slate-300 mb-8 max-w-2xl mx-auto">
+                Transform your innovative ideas into powerful digital solutions with cutting-edge technology and expert craftsmanship.
+            </p>
+            
+            <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" 
+                    class="bg-gradient-to-r from-blue-600 to-green-500 hover:from-blue-700 hover:to-green-600 text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 neon-glow hover:scale-105">
+                Start Your Project
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">About Aurovex</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto mb-8"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-400">Turning Ideas Into Reality</h3>
+                    <p class="text-lg text-slate-300 mb-6 leading-relaxed">
+                        At Aurovex, we specialize in transforming your innovative concepts into fully functional digital products. Our team of expert developers and designers work closely with startups and businesses to create custom web applications, mobile apps, and software prototypes that drive growth and success.
+                    </p>
+                    <p class="text-lg text-slate-300 leading-relaxed">
+                        We believe in the power of technology to solve real-world problems. From initial concept to final deployment, we guide you through every step of the development process, ensuring your vision becomes a reality that exceeds expectations.
+                    </p>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-slate-700 to-slate-900 p-8 rounded-2xl border border-slate-600">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-green-400 mb-2">50+</div>
+                                <div class="text-slate-300">Projects Delivered</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-blue-400 mb-2">100%</div>
+                                <div class="text-slate-300">Client Satisfaction</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-green-400 mb-2">24/7</div>
+                                <div class="text-slate-300">Support</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-blue-400 mb-2">1+</div>
+                                <div class="text-slate-300">Years Experience</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Our Services</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto mb-8"></div>
+                <p class="text-xl text-slate-300 max-w-2xl mx-auto">
+                    Comprehensive digital solutions tailored to your business needs
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Web Application -->
+                <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 card-hover">
+                    <div class="text-blue-400 mb-4">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M3 3h18v18H3V3zm16 16V5H5v14h14zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Web Application</h3>
+                    <p class="text-slate-300">
+                        Custom web applications built with modern frameworks and responsive design for optimal user experience.
+                    </p>
+                </div>
+                
+                <!-- Mobile Application -->
+                <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 card-hover">
+                    <div class="text-green-400 mb-4">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17 19H7V5h10v14zm-1-12H8v10h8V7zM16 1H8C6.9 1 6 1.9 6 3v18c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Mobile Application</h3>
+                    <p class="text-slate-300">
+                        Native and cross-platform mobile apps that deliver seamless performance across iOS and Android devices.
+                    </p>
+                </div>
+                
+                <!-- Website Development -->
+                <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 card-hover">
+                    <div class="text-blue-400 mb-4">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM4 18V8h16v10H4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Website Development</h3>
+                    <p class="text-slate-300">
+                        Professional websites that combine stunning design with powerful functionality to establish your online presence.
+                    </p>
+                </div>
+                
+                <!-- Application Design -->
+                <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 card-hover">
+                    <div class="text-green-400 mb-4">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Application Design</h3>
+                    <p class="text-slate-300">
+                        User-centered design solutions that create intuitive interfaces and exceptional user experiences.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Portfolio</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto mb-8"></div>
+                <p class="text-xl text-slate-300 max-w-2xl mx-auto">
+                    Showcasing our latest projects and innovative solutions
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gradient-to-br from-slate-700 to-slate-900 rounded-2xl overflow-hidden border border-slate-600 card-hover">
+                    <div class="h-48 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Crisis Genie AI</h3>
+                        <p class="text-slate-300 mb-4">An AI Assistant for Emergency, Police Assistance and Fire.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">HTML</span>
+                            <span class="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">CSS</span>
+                            <span class="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">JavaScipt</span>
+                            <span class="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Node.js</span>
+                            <span class="px-3 py-1 bg-green-600 text-white text-sm rounded-full">API</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-gradient-to-br from-slate-700 to-slate-900 rounded-2xl overflow-hidden border border-slate-600 card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Skill Swap Platform</h3>
+                        <p class="text-slate-300 mb-4">A Platform where you can enter your skills and it will be matched with the other users and you can get in touch with them.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">HTML</span>
+                            <span class="px-3 py-1 bg-green-600 text-white text-sm rounded-full">CSS</span>
+                            <span class="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">JavaScipt</span>
+                        </div>
+                    </div>
+                </div>
+
+                                <!-- Project 2 -->
+                <div class="bg-gradient-to-br from-slate-700 to-slate-900 rounded-2xl overflow-hidden border border-slate-600 card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Weather App</h3>
+                        <p class="text-slate-300 mb-4">An App where you can enter the name of the city and check the Weather Updates.    </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">HTML</span>
+                            <span class="px-3 py-1 bg-green-600 text-white text-sm rounded-full">CSS</span>
+                            <span class="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">JavaScipt</span>
+                        </div>
+                    </div>
+                </div>
+
+                                <!-- Project 2 -->
+                <div class="bg-gradient-to-br from-slate-700 to-slate-900 rounded-2xl overflow-hidden border border-slate-600 card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Eco Eatzz</h3>
+                        <p class="text-slate-300 mb-4">A Platform where you can enter the begetables you are left and it will give you recipies, by which none of them is wasted
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">HTML</span>
+                            <span class="px-3 py-1 bg-green-600 text-white text-sm rounded-full">CSS</span>
+                            <span class="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">JavaScipt</span>
+                            <span class="px-3 py-1 bg-green-600 text-white text-sm rounded-full">API</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-gradient-to-br from-slate-700 to-slate-900 rounded-2xl overflow-hidden border border-slate-600 card-hover">
+                    <div class="h-48 bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-white">AI Health Kiosk</h3>
+                        <p class="text-slate-300 mb-4">An AI medical assistant to analyze the risk by entering the BPM,Temperature. </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">HTML</span>
+                            <span class="px-3 py-1 bg-green-600 text-white text-sm rounded-full">CSS</span>
+                            <span class="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">JavaScipt</span>
+                            <span class="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Database</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-gradient-to-br from-slate-700 to-slate-900 rounded-2xl overflow-hidden border border-slate-600 card-hover">
+                    <div class="h-48 bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Second Brain</h3>
+                        <p class="text-slate-300 mb-4">An Application made with Flutter ,where you can set your daily tasks and set them as a remainder.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">HTML</span>
+                            <span class="px-3 py-1 bg-green-600 text-white text-sm rounded-full">CSS</span>
+                            <span class="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">JavaScipt</span>
+                            <span class="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Database</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Get In Touch</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto mb-8"></div>
+            <p class="text-xl text-slate-300 mb-12 max-w-2xl mx-auto">
+                Ready to bring your ideas to life? Let's discuss your project and create something amazing together.
+            </p>
+            
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 mb-12">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-blue-400">Email Us</h3>
+                        <p class="text-slate-300 text-lg">hello@aurovex.com</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-green-400">Follow Us</h3>
+                        <a href="https://instagram.com/aurovexverse" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center text-slate-300 hover:text-green-400 transition-colors text-lg">
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                            @aurovexverse
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <button onclick="window.open('mailto:hello@aurovex.com', '_blank')" 
+                    class="bg-gradient-to-r from-blue-600 to-green-500 hover:from-blue-700 hover:to-green-600 text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 neon-glow hover:scale-105">
+                Start Your Project Today
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-8 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="text-2xl font-bold text-gradient mb-4">Aurovex</div>
+            <p class="text-slate-400">© 2024 Aurovex. Building the future, one prototype at a time.</p>
+        </div>
+    </footer>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9918af95a46bca8c',t:'MTc2MDk2NTA5OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
